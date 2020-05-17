@@ -10,7 +10,7 @@
           :key="cur"
         >
           <span>
-            {{getCurrency(cur)}}
+            {{getCurrency(cur) | currency(cur)}}
           </span>
         </p>
       </div>
@@ -20,10 +20,7 @@
 
 <script>
 export default {
-  //props: ["rates"],
-  props: {
-    rates: {},
-  },
+  props: ["rates"],
   data: () => ({
     currencies: ["UAH", "USD", "EUR"],
   }),
